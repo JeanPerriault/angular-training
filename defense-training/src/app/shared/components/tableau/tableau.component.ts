@@ -9,7 +9,7 @@ import { Component, OnInit, Input } from '@angular/core';
 
 export class TableauComponent implements OnInit {
 
-  @Input() headers: String[];
+  @Input() headers: string[];
 
   constructor() { }
 

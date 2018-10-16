@@ -12,7 +12,7 @@ import { JsonPipe } from '@angular/common';
 
 export class ListPrestationsComponent implements OnInit {
 
-  public headers: String[];
+  public headers: string[];
   public collection: Prestation[];
 
   constructor(
