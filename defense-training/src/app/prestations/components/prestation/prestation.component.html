@@ -1,0 +1,18 @@
+<tr>
+  <th scope="row">{{ item.id }}</th>
+  <td>{{ item.type_presta }}</td>
+  <td>{{ item.client }}</td>
+  <td>{{ item.nb_jours }}</td>
+  <td>{{ item.tjm_ht | currency:'EUR' }}</td>
+  <td>{{ item | total | currency:'EUR' }}</td>
+  <td>{{ item | total:item.taux_tva | currency:'EUR' }}</td>
+  <td>
+    <select (change)="updateState($event)"
+            class="custom-select">
+      <option [value]="item.state">{{ item.state }}</option>
+      <ng-container *ngFor="let state of states">
+        <option *ngIf="item.state !== state" [value]="state">{{ state }}</option>
+      </ng-container>
+    </select>
+  </td>
+</tr>

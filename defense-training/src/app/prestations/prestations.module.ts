@@ -1,13 +1,18 @@
-import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { PrestationsComponent } from './containers/prestations/prestations.component';
+import { NgModule } from '@angular/core';
+import { SharedModule } from '../shared/shared.module';
+import { PrestationComponent } from './components/prestation/prestation.component';
+import { ListPrestationsComponent } from './containers/list-prestations/list-prestations.component';
 import { PrestationsRoutingModule } from './containers/prestations-routing.module';
+import { PrestationsComponent } from './containers/prestations/prestations.component';
+
 
 @NgModule({
   imports: [
     CommonModule,
-    PrestationsRoutingModule
+    PrestationsRoutingModule,
+    SharedModule
   ],
-  declarations: [PrestationsComponent]
+  declarations: [PrestationsComponent, ListPrestationsComponent, PrestationComponent]
 })
 export class PrestationsModule { }

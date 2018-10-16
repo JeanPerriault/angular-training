@@ -5,3 +5,16 @@ Todo:
   ☐ test
   ✔ test @started(18-10-15 16:07) @done(18-10-15 16:07) @lasted(54s)
   ☐ testss
+
+
+
+Notes:
+ng do check => check deep changes (objects)
+
+Object.values
+
+Object.keys
+
+new Set => valeur unique
+
+do not call a function directly in template, except on event => use pipe
