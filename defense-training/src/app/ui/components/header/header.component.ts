@@ -12,6 +12,7 @@ export class HeaderComponent implements OnInit {
   public navbarOpen = false;
   public faBars = faBars;
   public faUser = faUser;
+  public open = true;
 
   constructor() { }
 

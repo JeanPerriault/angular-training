@@ -6,14 +6,18 @@ import { ClientComponent } from './components/client/client.component';
 import { ClientsRoutingModule } from './clients-routing.module';
 import { SharedModule } from '../shared/shared.module';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { TemplatesModule } from '../templates/templates.module';
+
 
 @NgModule({
   imports: [
     CommonModule,
     ClientsRoutingModule,
     SharedModule,
-    FontAwesomeModule
+    FontAwesomeModule,
+    TemplatesModule
   ],
   declarations: [ClientsComponent, ListClientsComponent, ClientComponent]
 })
+
 export class ClientsModule { }

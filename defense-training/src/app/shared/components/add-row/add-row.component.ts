@@ -1,5 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { faPlus } from '@fortawesome/free-solid-svg-icons';
+import { faPlusSquare } from '@fortawesome/free-solid-svg-icons';
 
 
 @Component({
@@ -12,7 +12,7 @@ import { faPlus } from '@fortawesome/free-solid-svg-icons';
 export class AddRowComponent implements OnInit {
 
   @Input() txt: string;
-  public faPlus = faPlus;
+  public faPlusSquare = faPlusSquare;
 
   constructor() { }
 

@@ -1,4 +1,11 @@
 <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
+  <!-- <button class="navbar-toggler" type="button" (click)="toggleNavbar()"> -->
+
+  <div style="padding-right: 20px;cursor: pointer">
+    <span (click)="open = !open">
+      <fa-icon [icon]="faBars"></fa-icon>
+    </span>
+  </div>
 
   <a class="navbar-brand" routerLink="" routerLinkActive="active">
     {{ title }}
@@ -26,7 +33,7 @@
         </a>
       </li>
     </ul>
-    <fa-icon [icon]="faBars"></fa-icon>
+
     <fa-icon [icon]="faUser"></fa-icon>
   </div>
 </div>

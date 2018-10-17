@@ -1,9 +1,9 @@
 <div class="container-fluid">
   <header class="fixed-top">
-    <app-header></app-header>
+    <app-header #header></app-header>
   </header>
 
-  <main>
+  <main [ngClass]="{'close-aside': !header.open}">
 
     <div class="shadow position-fixed">
     </div>

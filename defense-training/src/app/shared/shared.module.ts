@@ -7,6 +7,7 @@ import { TableComponent } from './components/table/table.component';
 import { TableauComponent } from './components/tableau/tableau.component';
 import { StateDirective } from './directives/state.directive';
 import { TotalPipe } from './pipes/total.pipe';
+import { TableauLightComponent } from './components/tableau-light/tableau-light.component';
 
 @NgModule({
   imports: [
@@ -14,7 +15,7 @@ import { TotalPipe } from './pipes/total.pipe';
     RouterModule,
     FontAwesomeModule
   ],
-  declarations: [TotalPipe, TableComponent, TableauComponent, StateDirective, AddRowComponent],
-  exports: [TotalPipe, TableauComponent, StateDirective, AddRowComponent]
+  declarations: [TotalPipe, TableComponent, TableauComponent, StateDirective, AddRowComponent, TableauLightComponent],
+  exports: [TotalPipe, TableauComponent, StateDirective, AddRowComponent, TableauLightComponent]
 })
 export class SharedModule { }

@@ -6,6 +6,7 @@ import { ListPrestationsComponent } from './containers/list-prestations/list-pre
 import { PrestationsComponent } from './containers/prestations/prestations.component';
 import { PrestationsRoutingModule } from './prestations-routing.module';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { TemplatesModule } from '../templates/templates.module';
 
 
 @NgModule({
@@ -13,7 +14,8 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
     CommonModule,
     PrestationsRoutingModule,
     SharedModule,
-    FontAwesomeModule
+    FontAwesomeModule,
+    TemplatesModule
   ],
   declarations: [PrestationsComponent, ListPrestationsComponent, PrestationComponent]
 })
