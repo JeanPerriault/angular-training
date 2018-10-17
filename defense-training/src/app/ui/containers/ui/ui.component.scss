@@ -1,6 +1,9 @@
 @import "~src/variables";
 
 /// Description design of user interface
+.container-fluid {
+  padding: 0px;
+}
 
 header {
   height: $header-height;
