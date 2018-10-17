@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { PrestationService } from '../../services/prestation.service';
 import { Prestation } from 'src/app/shared/models/prestations.model';
+import { faPlus } from '@fortawesome/free-solid-svg-icons';
 import { JsonPipe } from '@angular/common';
 
 @Component({
@@ -14,6 +15,7 @@ export class ListPrestationsComponent implements OnInit {
 
   public headers: string[];
   public collection: Prestation[];
+  public faPlus = faPlus;
 
   constructor(
     private prestationService: PrestationService,

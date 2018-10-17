@@ -27,4 +27,8 @@ export class ClientComponent implements OnInit {
     const state = ev.target.value;
     this.clientService.update(this.item, state);
   }
+
+  public delete() {
+    this.clientService.delete(this.item);
+  }
 }

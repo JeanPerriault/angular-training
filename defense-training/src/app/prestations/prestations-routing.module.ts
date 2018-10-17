@@ -13,6 +13,7 @@ const appRoutes: Routes = [
     RouterModule.forChild(
       appRoutes
     )
-  ]
+  ],
+  exports: [RouterModule]
 })
 export class PrestationsRoutingModule { }

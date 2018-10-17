@@ -40,6 +40,10 @@ export class PrestationService {
     // this.set(item);
   }
 
+  public delete (item: Prestation): void {
+    console.log('delete ' + item.id);
+  }
+
   // Add item in collection
   public addItem () {
 

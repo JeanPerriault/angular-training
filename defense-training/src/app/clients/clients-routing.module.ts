@@ -12,6 +12,7 @@ const appRoutes: Routes = [
       appRoutes
     )
   ],
-  declarations: []
+  declarations: [],
+  exports: [RouterModule]
 })
 export class ClientsRoutingModule { }

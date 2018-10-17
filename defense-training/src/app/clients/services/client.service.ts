@@ -31,6 +31,10 @@ export class ClientService {
     item.state = state;
   }
 
+  public delete (item: Client): void {
+    console.log('delete ' + item.id);
+  }
+
   // Add item in collection
   public addItem () {
 

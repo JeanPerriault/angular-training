@@ -27,4 +27,8 @@ export class PrestationComponent implements OnInit {
     const state = ev.target.value;
     this.prestationService.update(this.item, state);
   }
+
+  public delete() {
+    this.prestationService.delete(this.item);
+  }
 }
