@@ -29,7 +29,8 @@ export class ListPrestationsComponent implements OnInit {
       'TJM HT',
       'Total HT',
       'Total TTC',
-      'Action'
+      'Action',
+      'Delete'
     ];
     this.collection = this.prestationService.collection;
   }

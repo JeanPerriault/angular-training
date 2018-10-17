@@ -26,7 +26,8 @@ export class ListClientsComponent implements OnInit {
       'Code postal',
       'Ville',
       'TJM HT',
-      'Action'
+      'Action',
+      'Delete'
     ];
     this.collection = this.clientService.collection;
   }

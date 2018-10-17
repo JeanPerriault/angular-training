@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { faBars, faUser } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-header',
@@ -9,6 +10,8 @@ export class HeaderComponent implements OnInit {
 
   public title = 'App Hash!';
   public navbarOpen = false;
+  public faBars = faBars;
+  public faUser = faUser;
 
   constructor() { }
 

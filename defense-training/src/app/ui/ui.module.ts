@@ -6,6 +6,7 @@ import { FooterComponent } from './components/footer/footer.component';
 import { HeaderComponent } from './components/header/header.component';
 import { NavComponent } from './components/nav/nav.component';
 import { UiComponent } from './containers/ui/ui.component';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 // import { NgbdCollapseBasic } from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
@@ -13,6 +14,7 @@ import { UiComponent } from './containers/ui/ui.component';
     CommonModule,
     LoginModule,
     RouterModule,
+    FontAwesomeModule
     // NgbdCollapseBasic
   ],
   declarations: [

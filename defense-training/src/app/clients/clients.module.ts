@@ -5,12 +5,14 @@ import { ListClientsComponent } from './containers/list-clients/list-clients.com
 import { ClientComponent } from './components/client/client.component';
 import { ClientsRoutingModule } from './clients-routing.module';
 import { SharedModule } from '../shared/shared.module';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 @NgModule({
   imports: [
     CommonModule,
     ClientsRoutingModule,
-    SharedModule
+    SharedModule,
+    FontAwesomeModule
   ],
   declarations: [ClientsComponent, ListClientsComponent, ClientComponent]
 })
