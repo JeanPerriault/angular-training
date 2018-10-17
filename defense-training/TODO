@@ -22,3 +22,6 @@ new Set => valeur unique
 
 do not call a function directly in template, except on event => use pipe
 
+observable
+observable froid => flux direct a l'instant de la souscription
+observable chaud => flux continue, à l'écoute d'update

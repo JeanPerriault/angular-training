@@ -16,13 +16,13 @@ $palette-color-four: #00c875;
 $gutter: 15px;
 
 // header
-$header-height: 65px;
+$header-height: 55px;
 $header-bg: $light-color;
 $header-padding: 0 $gutter;
 
 // main
-$main-pdt: 65px;
-$main-min-height: calc(100vh - 65px);
+$main-pdt: 55px;
+$main-min-height: calc(100vh - 55px);
 $main-bg: darken($light-color, 5);
 
 // sidenav

@@ -34,8 +34,12 @@ export class PrestationService {
   // }
 
   // Update item in collection
-  public update (item: Prestation, state: State) {
-    item.state = state;
+  public update (item: Prestation, state?: State) {
+    if (state) {
+      item.state = state;
+    } else {
+      this.collection.push(item);
+    }
     console.log(item);
     // this.set(item);
   }
@@ -45,8 +49,8 @@ export class PrestationService {
   }
 
   // Add item in collection
-  public addItem () {
-
+  public addItem (item: Prestation): void {
+    this.collection.push(item);
   }
 
   // Get colleciton item by id
