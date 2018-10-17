@@ -1,0 +1,16 @@
+<tr>
+  <th scope="row">{{ item.id }}</th>
+  <td>{{ item.nom }}</td>
+  <td>{{ item.adresse }}</td>
+  <td>{{ item.codePostal }}</td>
+  <td>{{ item.ville }}</td>
+  <td>{{ item.tjm_ht | currency:'EUR' }}</td>
+  <td [appState]="item.state">
+    <select (change)="updateState($event)" class="custom-select">
+      <option [value]="item.state">{{ item.state }}</option>
+      <ng-container *ngFor="let state of clientStates">
+        <option *ngIf="item.state !== state" [value]="state">{{ state }}</option>
+      </ng-container>
+    </select>
+  </td>
+</tr>
