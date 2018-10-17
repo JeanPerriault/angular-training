@@ -9,7 +9,10 @@ Todo:
 
 
 Notes:
+
 ng do check => check deep changes (objects)
+
+ng on changes detects only changes of type par value (not by references, meaning not for objects)
 
 Object.values
 
@@ -18,3 +21,4 @@ Object.keys
 new Set => valeur unique
 
 do not call a function directly in template, except on event => use pipe
+
