@@ -1,4 +1,4 @@
-{{ collection | json }}
+<!-- {{ collection | json }} -->
 
 <app-tableau [headers]=headers>
   <app-prestation *ngFor="let presta of collection"
@@ -6,20 +6,3 @@
   </app-prestation>
   <p class="bl">TEST</p>
 </app-tableau>
-
-<!--
-<div class="table-responsive">
-  <table class="table table-hover">
-    <thead class="thead-dark">
-      <tr>
-        <th *ngFor="let item of headers" scope="col">{{ item }}</th>
-      </tr>
-    </thead>
-    <tbody>
-      <app-prestation *ngFor="let presta of collection"
-                      [item]="presta">
-      </app-prestation>
-    </tbody>
-  </table>
-</div>
--->

@@ -1,5 +1,6 @@
 <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
-    <a class="navbar-brand" href="#">
+
+    <a class="navbar-brand" routerLink="" routerLinkActive="active">
       {{ title }}
     </a>
 
@@ -12,11 +13,14 @@
          [ngClass]="{ 'show': navbarOpen }">
       <ul class="navbar-nav mr-auto">
         <li class="nav-item">
-          <a class="nav-link" href="#">Item 1</a>
+          <a class="nav-link" routerLink="/login" routerLinkActive="active">
+            Login
+          </a>
         </li>
-
         <li class="nav-item">
-          <a class="nav-link" href="#">Item 2</a>
+            <a class="nav-link" routerLink="/prestations" routerLinkActive="active">
+              Prestations
+            </a>
         </li>
       </ul>
     </div>
