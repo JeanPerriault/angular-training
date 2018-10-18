@@ -1,0 +1,13 @@
+@import '~src/variables';
+
+:host-context(app-template-a) .table-responsive {
+  border-bottom: 5px solid $palette-color-one;
+}
+
+:host-context(app-template-b) .table-responsive {
+  border-bottom: 5px solid $palette-color-two;
+}
+
+:host() {
+  font-family: 'Courier New', Courier, monospace;
+}

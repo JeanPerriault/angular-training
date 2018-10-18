@@ -1,5 +1,17 @@
 @import '~src/variables';
 
+
+.jumbotron {
+  margin-top: 10px;
+  background: #343a40;
+
+  h1 {
+    font-size: 2rem;
+    color: $light-color;
+  }
+}
+
+
 .bandeau {
   background: $palette-color-one;
   padding: 2rem 0;
