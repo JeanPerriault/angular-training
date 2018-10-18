@@ -50,7 +50,7 @@ export class PrestationService {
 
   // Add item in collection
   public addItem (item: Prestation): void {
-    this.collection.push(item);
+    this.collection.push(new Prestation(item));
   }
 
   // Get colleciton item by id

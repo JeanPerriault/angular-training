@@ -1,9 +1,10 @@
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { SharedModule } from '../shared/shared.module';
 import { TemplatesModule } from '../templates/templates.module';
+import { FormReactiveComponent } from './components/form-reactive/form-reactive.component';
 import { FormComponent } from './components/form/form.component';
 import { PrestationComponent } from './components/prestation/prestation.component';
 import { AddPrestationComponent } from './containers/add-prestation/add-prestation.component';
@@ -19,7 +20,8 @@ import { PrestationsRoutingModule } from './prestations-routing.module';
     SharedModule,
     FontAwesomeModule,
     TemplatesModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule
   ],
   declarations: [
     PrestationsComponent,
@@ -27,7 +29,8 @@ import { PrestationsRoutingModule } from './prestations-routing.module';
     PrestationComponent,
     AddPrestationComponent,
     EditPrestationsComponent,
-    FormComponent
+    FormComponent,
+    FormReactiveComponent
   ]
 })
 export class PrestationsModule { }
