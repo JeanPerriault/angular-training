@@ -25,10 +25,16 @@ export class PrestationComponent implements OnInit {
 
   public updateState(ev: any) {
     const state = ev.target.value;
-    this.prestationService.update(this.item, state);
+    this.prestationService.update(this.item, state).then(
+      (data) => {
+        this.item.state = state;
+      }
+    );
   }
 
   public delete() {
-    this.prestationService.delete(this.item);
+    this.prestationService.delete(this.item).then(() => {
+      // afficher un mess ou retour api
+    });
   }
 }

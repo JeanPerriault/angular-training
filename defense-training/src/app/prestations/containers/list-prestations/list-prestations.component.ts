@@ -5,6 +5,7 @@ import { faPlus } from '@fortawesome/free-solid-svg-icons';
 import { JsonPipe } from '@angular/common';
 import { Subscription, Observable } from 'rxjs';
 
+
 @Component({
   selector: 'app-list-prestations',
   templateUrl: './list-prestations.component.html',
@@ -16,9 +17,9 @@ export class ListPrestationsComponent implements OnInit, OnDestroy {
 
   public headers: string[];
   public faPlus = faPlus;
-  public collection: Prestation[];
-  // public collection$: Observable<Prestation[]>;
-  public sub: Subscription;
+  // public collection: Prestation[];
+  public collection$: Observable<Prestation[]>;
+  // public sub: Subscription;
 
   constructor(
     private prestationService: PrestationService,
@@ -37,13 +38,13 @@ export class ListPrestationsComponent implements OnInit, OnDestroy {
       'Action',
       'Delete'
     ];
-    // this.collection = this.prestationService.collection$;
-    this.sub = this.prestationService.collection$.subscribe((data) => {
-      this.collection = data;
-    });
+    this.collection$ = this.prestationService.collection$;
+    // this.sub = this.prestationService.collection$.subscribe((data) => {
+    //   this.collection = data;
+    // });
   }
 
   ngOnDestroy() {
-    this.sub.unsubscribe();
+    // this.sub.unsubscribe();
   }
 }

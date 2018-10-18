@@ -51,27 +51,66 @@ export class PrestationService {
   // }
 
   // Update item in collection
-  public update (item: Prestation, state?: State) {
-    // if (state) {
-    //   item.state = state;
-    // } else {
-    //   this.collection$.push(item);
-    // }
-    // console.log(item);
-    // this.set(item);
+  // public update (item: Prestation, state?: State) {
+  //   if (state) {
+  //     item.state = state;
+  //   }
+  //   // else {
+  //   //   this.collection$.push(item);
+  //   // }
+  //   // console.log(item);
+  //   // this.set(item);
+  // }
+
+  // public delete (item: Prestation): void {
+  //   console.log('delete ' + item.id);
+  // }
+
+  // // Add item in collection
+  // public addItem (item: Prestation): void {
+  //   // this.collection.push(new Prestation(item));
+  // }
+
+  // // Get colleciton item by id
+  // public getItemById() {
+
+  // }
+
+
+
+
+  // add presta
+  add(item: Prestation): Promise<any> {
+    const id = this.afs.createId();
+    const prestation = { id, ...item };
+    return this.itemsCollection.doc(id).set(prestation).catch((e) => {
+      console.log(e);
+    });
+    // return this.http.post('urlapi/prestations', item);
   }
 
-  public delete (item: Prestation): void {
-    console.log('delete ' + item.id);
+
+  update(item: Prestation, state?: State): Promise<any> {
+    // create a new object, with item attributes
+    const presta  = {...item};
+    if (state) {
+      presta.state = state;
+    }
+    return this.itemsCollection.doc(item.id).update(presta).catch((e) => {
+      console.log(e);
+    });
+    // return this.http.patch('urlapi/prestations/'+item.id, presta);
   }
 
-  // Add item in collection
-  public addItem (item: Prestation): void {
-    // this.collection.push(new Prestation(item));
+  public delete(item: Prestation): Promise<any> {
+    return this.itemsCollection.doc(item.id).delete().catch((e) => {
+      console.log(e);
+    });
+    // return this.http.delete(`urlapi/prestations/${item.id}`);
   }
 
-  // Get colleciton item by id
-  public getItemById() {
-
+  getPrestation(id: string): Observable<Prestation> {
+    return this.itemsCollection.doc<Prestation>(id).valueChanges();
+    // return this.http.get(`urlaspi/prestations/${id}`);
   }
 }

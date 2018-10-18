@@ -21,7 +21,9 @@ export class AddPrestationComponent implements OnInit {
 
   public add(item: Prestation): void {
     console.log(item);
-    this.prestationService.addItem(item);
-    this.router.navigate(['prestations']);
+    this.prestationService.add(item).then((data) => {
+      // If and else using api
+      this.router.navigate(['prestations']);
+    });
   }
 }

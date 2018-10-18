@@ -31,11 +31,15 @@ export class ClientComponent implements OnInit {
 
   public updateState(ev: any) {
     const state = ev.target.value;
-    this.clientService.update(this.item, state);
+    this.clientService.update(this.item, state).then(() => {
+      this.item.state = state;
+    });
   }
 
   public delete() {
-    this.clientService.delete(this.item);
+    this.clientService.delete(this.item).then(() => {
+      // afficher un mess ou retour api
+    });
   }
 
   public getDetails() {

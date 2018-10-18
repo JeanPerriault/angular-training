@@ -1,7 +1,7 @@
 <!-- {{ collection | json }} -->
 
 <app-tableau [headers]=headers>
-  <app-prestation *ngFor="let presta of collection"
+  <app-prestation *ngFor="let presta of collection$ | async"
                   [item]="presta">
   </app-prestation>
 </app-tableau>

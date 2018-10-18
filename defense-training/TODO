@@ -25,3 +25,5 @@ do not call a function directly in template, except on event => use pipe
 observable
 observable froid => flux direct a l'instant de la souscription
 observable chaud => flux continue, à l'écoute d'update
+
+changedetection strategy => wiht onpush, angular will update view only for input, observable and on events

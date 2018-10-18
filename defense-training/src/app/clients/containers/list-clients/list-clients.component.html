@@ -1,5 +1,6 @@
 <app-tableau-light [headers]=headers>
-  <app-client *ngFor="let presta of collection" [item]="presta">
+  <app-client *ngFor="let client of collection$ | async"
+              [item]="client">
   </app-client>
 </app-tableau-light>
 
