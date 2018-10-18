@@ -31,5 +31,4 @@ export class ListClientsComponent implements OnInit {
     ];
     this.collection = this.clientService.collection;
   }
-
 }
