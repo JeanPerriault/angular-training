@@ -9,6 +9,7 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { TemplatesModule } from '../templates/templates.module';
 import { DetailsClientComponent } from './components/details-client/details-client.component';
 import { AccordionComponent } from './components/accordion/accordion.component';
+import { NgbAccordionModule } from '@ng-bootstrap/ng-bootstrap';
 
 
 @NgModule({
@@ -17,7 +18,8 @@ import { AccordionComponent } from './components/accordion/accordion.component';
     ClientsRoutingModule,
     SharedModule,
     FontAwesomeModule,
-    TemplatesModule
+    TemplatesModule,
+    NgbAccordionModule
   ],
   declarations: [ClientsComponent, ListClientsComponent, ClientComponent, DetailsClientComponent, AccordionComponent]
 })

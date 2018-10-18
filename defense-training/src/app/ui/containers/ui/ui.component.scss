@@ -20,11 +20,13 @@ main {
 aside {
   background: $sidenav-bg;
   width: $sidenav-width;
+  transition: width 0.5s;
+  overflow: hidden;
   min-height: $sidenav-min-height;
   position: fixed;
   z-index: 1000;
   .scroller {
-    overflow-y: auto;
+    // overflow-y: auto;
     max-height: $scroller-max-height;
     padding-bottom: $scroller-pdb;
   }
