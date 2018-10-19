@@ -1,4 +1,4 @@
-<tr>
+<tr (click)="edit()">
   <th scope="row">{{ item.id }}</th>
   <td>{{ item.type_presta }}</td>
   <td>{{ item.client }}</td>
@@ -8,6 +8,7 @@
   <td>{{ item | total:item.taux_tva | currency:'EUR' }}</td>
   <td [appState]="item.state">
     <select (change)="updateState($event)"
+            (click)="$event.stopPropagation()"
             class="custom-select">
       <option [value]="item.state">{{ item.state }}</option>
       <ng-container *ngFor="let state of states">
@@ -16,6 +17,6 @@
     </select>
   </td>
   <td>
-    <fa-icon [icon]="faTrash" (click)="delete()"></fa-icon>
+    <fa-icon [icon]="faTrash" (click)="$event.stopPropagation(); delete()"></fa-icon>
   </td>
 </tr>

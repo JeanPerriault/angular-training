@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { ClientsComponent } from './containers/clients/clients.component';
 import { DetailsClientComponent } from './components/details-client/details-client.component';
 import { AccordionComponent } from './components/accordion/accordion.component';
+import { AddClientComponent } from './containers/add-client/add-client.component';
 
 const appRoutes: Routes = [
   {
@@ -18,8 +19,10 @@ const appRoutes: Routes = [
         component: AccordionComponent
       }
     ]
-  }
+  },
+  { path: 'add', component: AddClientComponent }
 ];
+
 
 @NgModule({
   imports: [
@@ -30,4 +33,5 @@ const appRoutes: Routes = [
   declarations: [],
   exports: [RouterModule]
 })
+
 export class ClientsRoutingModule { }

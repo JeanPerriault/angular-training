@@ -10,6 +10,7 @@ import { environment } from 'src/environments/environment.firebase';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { UiModule } from './ui/ui.module';
+import { HttpClientModule } from '@angular/common/http';
 
 registerLocaleData(localeFr, 'fr');
 
@@ -24,7 +25,8 @@ registerLocaleData(localeFr, 'fr');
     NgbModule.forRoot(),
     AppRoutingModule,
     AngularFireModule.initializeApp(environment.firebase),
-    AngularFirestoreModule
+    AngularFirestoreModule,
+    HttpClientModule
   ],
   providers: [ { provide: LOCALE_ID, useValue: 'fr' } ],
   bootstrap: [AppComponent]

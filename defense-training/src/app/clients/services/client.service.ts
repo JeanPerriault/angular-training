@@ -71,19 +71,19 @@ export class ClientService {
     return this.itemsCollection.doc(item.id).update(presta).catch((e) => {
       console.log(e);
     });
-    // return this.http.patch('urlapi/prestations/'+item.id, presta);
+    // return this.http.patch('urlapi/clients/'+item.id, presta);
   }
 
   public delete(item: Client): Promise<any> {
     return this.itemsCollection.doc(item.id).delete().catch((e) => {
       console.log(e);
     });
-    // return this.http.delete(`urlapi/prestations/${item.id}`);
+    // return this.http.delete(`urlapi/clients/${item.id}`);
   }
 
-  getPrestation(id: string): Observable<Client> {
+  getClient(id: string): Observable<Client> {
     return this.itemsCollection.doc<Client>(id).valueChanges();
-    // return this.http.get(`urlaspi/prestations/${id}`);
+    // return this.http.get(`urlaspi/clients/${id}`);
   }
 
 

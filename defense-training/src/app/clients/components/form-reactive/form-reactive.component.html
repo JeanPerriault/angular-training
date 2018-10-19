@@ -1,0 +1,65 @@
+<form novalidate (ngSubmit)="process()" [formGroup]="addForm">
+
+    <div class="form-group">
+      <label for="nom">Nom</label>
+      <input type="text"
+             class="form-control"
+             id="nom"
+             formControlName="nom">
+      <div class="alert alert-danger"
+           *ngIf="isError('nom')">
+        Champ invalide
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="adresse">Adresse</label>
+      <input type="text"
+             class="form-control"
+             id="adresse"
+             formControlName="adresse">
+      <div class="alert alert-danger"
+           *ngIf="isError('adresse')">
+        Champ invalide
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="codePostal">Code postal</label>
+      <input type="number"
+             class="form-control"
+             id="codePostal"
+             formControlName="codePostal">
+    </div>
+
+    <div class="form-group">
+      <label for="tjm_ht">Tjm HT</label>
+      <input type="number"
+             class="form-control"
+             id="tjm_ht"
+             formControlName="tjm_ht">
+    </div>
+
+    <div class="form-group">
+        <label for="tva">TVA</label>
+        <input type="number"
+               class="form-control"
+               id="tva"
+               formControlName="tva">
+    </div>
+
+    <div class="form-group">
+      <label for="state">Action</label>
+      <select class="form-control"
+              id="state"
+              formControlName="state">
+        <option *ngFor="let state of states" [value]="state">{{ state }}</option>
+      </select>
+    </div>
+
+    <button [disabled]="!addForm.valid"
+            type="submit"
+            class="btn btn-primary">
+      Submit
+    </button>
+  </form>

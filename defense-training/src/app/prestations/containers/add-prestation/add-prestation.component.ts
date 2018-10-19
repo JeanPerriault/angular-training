@@ -22,8 +22,14 @@ export class AddPrestationComponent implements OnInit {
   public add(item: Prestation): void {
     console.log(item);
     this.prestationService.add(item).then((data) => {
-      // If and else using api
+      // If and else using api or display message
       this.router.navigate(['prestations']);
     });
+
+    // HTTP calls
+    // this.prestationService.add(item).subscribe((data) => {
+    //   // If and else using api or display message
+    //   this.router.navigate(['prestations']);
+    // });
   }
 }

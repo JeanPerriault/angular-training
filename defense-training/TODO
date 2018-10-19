@@ -6,6 +6,29 @@ Todo:
   ✔ test @started(18-10-15 16:07) @done(18-10-15 16:07) @lasted(54s)
   ☐ testss
 
+  creer route pour edit avec id et un resolve
+  creation du service resolve
+    recupérer l'id passé dans la route
+    injecter PrestationService
+    dans method resolve, appeler getPrestation de PrestationService en lui passant l'id
+    return le resultat de la requete is ddata reécupérer
+    sinon return false et router.navigate vers liste des prestations
+
+  sur editPrestations.ts
+    récupérer dans router l'objet que le resolve a retourné (dans data)
+    passer cet objet à app-form via un @Input()
+
+  sur form-reactive.ts
+    transformer init en @Input() pour récupérer l'object assé depuis editComponent
+    envoyer au parent editComponent un @Output (existe dejà) (attention id perdu)
+
+  sur editComponent.ts
+    ajouter item.id (récupérer plus tot dans paramMap) dans le fn udpate()
+    uitliser la méthode update() du service prestationsService et lui passer un obj avec id
+
+
+  creer route pour edit avec id et resolve
+
 
 
 Notes:

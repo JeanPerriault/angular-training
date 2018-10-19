@@ -1,7 +1,7 @@
-import { Component, EventEmitter, OnInit, Output, Input } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { State } from 'src/app/shared/enums/state.enum';
-import { Prestation } from 'src/app/shared/models/prestations.model';
+import { ClientState } from 'src/app/shared/enums/client-state.enum';
+import { Client } from 'src/app/shared/models/clients.model';
 
 
 @Component({
@@ -13,11 +13,10 @@ import { Prestation } from 'src/app/shared/models/prestations.model';
 
 export class FormReactiveComponent implements OnInit {
 
-  public states = Object.values(State);
-  @Output() newItem: EventEmitter<Prestation> = new EventEmitter();
+  public states = Object.values(ClientState);
+  @Output() newItem: EventEmitter<Client> = new EventEmitter();
   public addForm: FormGroup;
-  // private init = new Prestation();
-  @Input() init = new Prestation();
+  private init = new Client();
 
 
   constructor(
@@ -29,27 +28,34 @@ export class FormReactiveComponent implements OnInit {
     this.createForm();
   }
 
+  // 'Nom',
+  //     'Adresse',
+  //     'Code postal',
+  //     'Ville',
+  //     'TJM HT',
+  //     'Action',
+  //     'Delete'
 
   private createForm() {
     this.addForm = this.fb.group({
-      type_presta: [
-        this.init.type_presta,
+      nom: [
+        this.init.nom,
         Validators.required
       ],
-      client: [
-        this.init.client,
+      adresse: [
+        this.init.adresse,
         Validators.compose([
           Validators.required,
           Validators.minLength(5)
         ])
       ],
-      nb_jours: [
-        this.init.nb_jours
+      codePostal: [
+        this.init.codePostal
       ],
       tjm_ht: [
         this.init.tjm_ht
       ],
-      taux_tva: [
+      tva: [
         this.init.taux_tva
       ],
       state: [
